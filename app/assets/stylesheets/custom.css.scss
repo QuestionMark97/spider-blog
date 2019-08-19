@@ -73,6 +73,21 @@ $navbar-default-bg: rgba(34, 34, 34, 1);
 	margin-top: 0;
 }
 
+.article-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.article-title a:hover{
+	text-decoration: none;
+}
+
+.article-body {
+	border-top: 1px solid #eaeaea;
+	padding-top: 15px;
+	padding:bottom 15px;
+}
+
 .btn-xl:hover {
 	color: #ddd;
 	background-color: #2A4020;
