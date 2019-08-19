@@ -1,11 +1,9 @@
-1) Create a new Rails application and call it alpha-blog
+Using Rails version: 5.1.7 with Ruby 2.5.5
+__________________________________________
 
-2) Ensure you can run the server and preview the application
 
-3) Pages Controller
-
-4) Ensure you have appropriate routes
-
-5) Create a homepage, about
-
-6) Make nice HTML
+This is a simple rails blog app that I am creating as part of 'The Complete
+Ruby on Rails Developer Course' by Mashrur Hossain and Rob Percival on Udemy.
+My educational goals for this app are to learn the basic structure of a Rails
+application (route, controller, view, model) as well as CRUD operations,
+database associations, authentication, and bootstrap.
