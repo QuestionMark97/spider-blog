@@ -64,6 +64,15 @@ $navbar-default-bg: rgba(34, 34, 34, 1);
 	border-color: #3F622E;
 }
 
+.article-actions {
+	border-top: 1px solid #eaeaea;
+	padding-top: 5px;
+}
+
+.description {
+	margin-top: 0;
+}
+
 .btn-xl:hover {
 	color: #ddd;
 	background-color: #2A4020;
@@ -80,8 +89,7 @@ footer {
 }
 
 #footer {
-	position: absolute;
-	background-color: rgba(34, 34, 34, 0.3);
+	position: fixed;
 	bottom: 0px;
 	margin: 0px;
 	width: 100%;
@@ -106,6 +114,6 @@ footer a {
 }
 
 footer a:hover {
-	color: #222;
 	text-decoration: none;
+	color: #fff;
 }
