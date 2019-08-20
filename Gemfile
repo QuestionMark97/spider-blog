@@ -10,6 +10,10 @@ end
 gem 'rails', '~> 5.1.7'
 # Use Bcrypt for password authentication
 gem 'bcrypt', '~> 3.1.7'
+# Use will_paginate for listings pagination
+gem 'will_paginate', '~> 3.1.7'
+# Include bootstrap classes for pagination
+gem 'bootstrap-will_paginate', '~> 1.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use bootstrap classes to facilitate styling
