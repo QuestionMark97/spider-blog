@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
-		file_name = "spider_profiles/#{[:B, :G, :O, :P, :R, :T, :Y].sample}#{rand(10)}.jpg"
+		srand Time.now.usec
+		file_name = "spider_profiles/#{[:B, :G, :O, :P, :R, :T, :Y][rand(7)]}#{rand(10)}.jpg"
 		profile_url = ActionController::Base.helpers.asset_url(file_name)
 		if @user.save
 			session[:user_id] = @user.id
