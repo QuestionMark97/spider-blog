@@ -66,6 +66,12 @@ $navbar-default-bg: rgba(34, 34, 34, 1);
 
 .btn-xl:hover {
 	color: #ddd;
+	background-color: #345028;
+	border-color: #345028;
+}
+
+.btn-xl:active {
+	color: #ddd;
 	background-color: #2A4020;
 	border-color: #2A4020;
 }

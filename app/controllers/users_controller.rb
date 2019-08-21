@@ -7,9 +7,12 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(user_params)
+		file_name = "spider_profiles/#{[:B, :G, :O, :P, :R, :T, :Y].sample}#{rand(10)}.jpg"
+		profile_url = ActionController::Base.helpers.asset_url(file_name)
 		if @user.save
+			session[:user_id] = @user.id
 			flash[:success] = "Welcome to the spider blog, #{@user.username}"
-			redirect_to articles_path
+			redirect_to user_path(@user)
 		else
 			render 'new'
 		end
@@ -21,7 +24,7 @@ class UsersController < ApplicationController
 	def update
 		if @user.update(user_params)
 			flash[:success] = 'Your account was updated successfully'
-			redirect_to articles_path
+			redirect_to user_path(@user)
 		end
 	end
 
