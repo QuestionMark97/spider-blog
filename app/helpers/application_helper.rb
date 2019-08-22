@@ -10,7 +10,6 @@ module ApplicationHelper
 		end
 	end
 
-
 	private
 	# Is there a Gravatar for this email? Optionally specify :rating and :timeout.
 	def gravatar?(email, options = {})

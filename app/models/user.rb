@@ -3,8 +3,7 @@ class User < ActiveRecord::Base
 
 	before_save {self.email = email.downcase}
 
-	file_name = "spider_profiles/#{[:B, :G, :O, :P, :R, :T, :Y].sample}#{rand(10)}.jpg"
-	before_save {self.img = ActionController::Base.helpers.asset_url(file_name)}
+	before_save {set_img self}
 
 	validates :username, presence: true,
 						uniqueness: {case_sensitive: false},
@@ -17,4 +16,28 @@ class User < ActiveRecord::Base
 						format: {with: VALID_EMAIL_REGEX} 
 
 	has_secure_password
+
+	private
+	def set_img(obj)
+		profile_colors = ['B', 'G', 'O', 'P', 'R', 'T', 'Y']
+		if !User.any?
+			profile_id = 'B0'
+		else
+			img_last = User.last.img.split('/')[3]
+			if img_last[0] == 'Y'
+				profile_color = 'B'
+			else
+				profile_color = profile_colors[profile_colors.index(img_last[0]) + 1]
+			end
+			if img_last[1] == '9'
+				profile_num = '0'
+			else
+				profile_num = img_last[1].to_i + 1
+			end
+			profile_id = profile_color + profile_num.to_s
+			end
+		file_name = "spider_profiles/#{profile_id}.jpg"
+		profile_url = ActionController::Base.helpers.asset_url(file_name)
+		obj.img = profile_url
+	end
 end
