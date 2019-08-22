@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 		srand Time.now.usec
 		file_name = "spider_profiles/#{[:B, :G, :O, :P, :R, :T, :Y][rand(7)]}#{rand(10)}.jpg"
 		profile_url = ActionController::Base.helpers.asset_url(file_name)
+		puts profile_url
 		if @user.save
 			session[:user_id] = @user.id
 			flash[:success] = "Welcome to the spider blog, #{@user.username}"
