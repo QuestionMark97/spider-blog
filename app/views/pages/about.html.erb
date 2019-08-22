@@ -1,6 +1,7 @@
 <div class='center jumbotron'>
 	<h1 id='title'>About</h1>
-
+	<% srand Time.now.usec %>
+	<%= "#{file_name = "spider_profiles/#{[:B, :G, :O, :P, :R, :T, :Y][rand(7)]}#{rand(10)}.jpg"}" %>
 	<p id='about'>
 		Hello, this is a simple blog application that I am creating for 'The Complete Ruby on Rails Developer Course' by Mashrur Hossain and Rob Percival on Udemy. Key themes throughout the creation of this app include basic structure of a Rails application (route, controller, view, model) as well as CRUD operations, database associations, authentication, and styling with bootstrap.
 		<hr/>
