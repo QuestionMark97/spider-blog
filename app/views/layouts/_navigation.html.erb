@@ -51,6 +51,7 @@
 
               <%= gravatar_for current_user, size: 20 %> &nbsp;
               <%= current_user.username %>
+              <%= '(Admin)' if current_user.admin? %>
               <span class='caret'></span></a>
 
             <ul class='dropdown-menu'>
