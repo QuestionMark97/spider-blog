@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
 
-	# Pages controller
+	# Pages routes
 	root 'pages#home'
-	get 'about', to: 'pages#about'
+	get 'about' => 'pages#about'
 
-	# Articles controller
+	# Articles routes
 	resources :articles
 
-	# Users controller
-	get 'signup', to: 'users#new'
+	# Users routes
+	get 'signup' => 'users#new'
 	resources :users, except: [:new]
 
-	# Sessions controller
-	get 'login', to: 'sessions#new'
-	post 'login', to: 'sessions#create'
-	delete 'logout', to: 'sessions#destroy'
+	# Sessions routes
+	get 'login' => 'sessions#new'
+	post 'login' => 'sessions#create'
+	delete 'logout' => 'sessions#destroy'
+
+	# Categories routes
+	resources :categories, except: [:destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
