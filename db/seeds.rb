@@ -20,7 +20,7 @@ user = User.create(username: 'Sandy', email: 'sandy@email.com', password: 'test'
 user = User.create(username: 'Benjamin', email: 'benjamin@email.com', password: 'test')
 user = User.create(username: 'Alex', email: 'peter@email.com', password: 'test')
 user = User.create(username: 'Andrew', email: 'andrew@email.com', password: 'test')
-user = User.create(username: 'Mark', email: 'mark@example.com', password: 'admin')
+user = User.create(username: 'Mark', email: 'mark@example.com', password: 'admin', admin: true)
 
 article = Article.create(title: 'Welcome!', description: 'Welcome to the Spider Blog!', user: User.last)
 article = Article.create(title: 'This is a neat website', description: 'Has anyone seen Carl?', user: User.find(3))
