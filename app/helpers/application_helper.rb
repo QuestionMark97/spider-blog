@@ -11,10 +11,11 @@ module ApplicationHelper
 	end
 
 	private
+	# I took this method off the web:
 	# Is there a Gravatar for this email? Optionally specify :rating and :timeout.
 	def gravatar?(email, options = {})
 	  hash = Digest::MD5.hexdigest(email.to_s.downcase)
-	  options = { :rating => 'x', :timeout => 2 }.merge(options)
+	  options = { :rating => 'pg', :timeout => 2 }.merge(options)
 	  http = Net::HTTP.new('www.gravatar.com', 80)
 	  http.read_timeout = options[:timeout]
 	  response = http.request_head("/avatar/#{hash}?rating=#{options[:rating]}&default=http://gravatar.com/avatar")

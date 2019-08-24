@@ -10,7 +10,7 @@
 
 # Users
 user = User.create([{username: 'Bob', email: 'bob@email.com', password: 'test'},
-										{username: 'Sally', email: 'jack@email.com', password: 'test'},
+										{username: 'Sally', email: 'sally@email.com', password: 'test'},
 										{username: 'Rick', email: 'rick@email.com', password: 'test'},
 										{username: 'Zach', email: 'zach@email.com', password: 'test'},
 										{username: 'Nick', email: 'nick@email.com', password: 'test'},
@@ -18,7 +18,7 @@ user = User.create([{username: 'Bob', email: 'bob@email.com', password: 'test'},
 										{username: 'Sam', email: 'sam@email.com', password: 'test'},
 										{username: 'Sandy', email: 'sandy@email.com', password: 'test'},
 										{username: 'Benjamin', email: 'benjamin@email.com', password: 'test'},
-										{username: 'Alex', email: 'peter@email.com', password: 'test'},
+										{username: 'Alex', email: 'alex@email.com', password: 'test'},
 										{username: 'Andrew', email: 'andrew@email.com', password: 'test'},
 										{username: 'Mark', email: 'mark@example.com', password: 'admin', admin: true}])
 
@@ -34,7 +34,7 @@ article9 = Article.create(title: 'You Won', description: 'You won a neww carrrrr
 article10 = Article.create(title: 'Fishing Locations', description: 'Here are the best places to fish', user: User.find(11))
 article11 = Article.create(title: 'First Day', description: 'First day of school is coming up. Here are some school supplies you will need', user: User.find(8))
 article12 = Article.create(title: 'Math Tips', description: 'Here are some neat math tricks', user: User.find(10))
-article13 = Article.create(title: 'Recipe', description: 'Here\s a great recipe I found!', user: User.find(5))
+article13 = Article.create(title: 'Recipe', description: 'Here\'s a great recipe I found!', user: User.find(5))
 article14 = Article.create(title: 'Hi there', description: 'Some more life hacks for you all', user: User.find(4))
 article15 = Article.create(title: 'Help', description: 'Any solutions to this problem I\'m having with my python program?', user: User.find(10))
 article16 = Article.create(title: 'My name is Sally', description: 'Hello my name is Sally', user: User.find(2))
