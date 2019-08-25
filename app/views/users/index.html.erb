@@ -1,6 +1,6 @@
 <h1 align='center'>All Users</h1>
 <div align='center'>
-	<%= will_paginate %>
+	<span class='page-btns'><%= will_paginate %></span>
 	<% @users.each do |user| %>
 		<ul class='listing'>
 		<div class='row'>
@@ -20,5 +20,5 @@
 		</div>
 		</ul>
 	<% end %>
-	<%= will_paginate %>
+	<span class='page-btns'><%= will_paginate %></span>
 </div>
