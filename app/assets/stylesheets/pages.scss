@@ -3,6 +3,52 @@ body {
 	background-size: cover;
 }
 
+#override .jumbotron {
+	background-color: rgba(34, 34, 34, 0.75);
+	height: 493px;
+	padding: 100px;
+	margin-bottom: 30px;
+}
+
+#override .jumbotron h1 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 100px;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#override .title {
+	color: #ddd;
+}
+
+.btn-xl {
+	color: #ddd;
+	font-size: 1.7em;
+	background-color: #362;
+	border-color: #362;
+}
+
+.btn-xl:hover {
+	color: #ddd;
+	background-color: #352;
+	border-color: #352;
+}
+
+.btn-xl:active {
+	color: #ddd;
+	background-color: #242;
+	border-color: #242;
+}
+
+#about {
+	color: #ddd;
+}
+
+#fine_print {
+	color: #ddd;
+}
+
 #footer {
 	background-color: rgba(34, 34, 34, 0.3);
 }

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 	get 'about' => 'pages#about'
 
 	# Articles routes
-	resources :articles
+	resources :articles do
+		resources 'comments', except: [:new, :show, :index]
+	end
 
 	# Users routes
 	get 'signup' => 'users#new'
@@ -18,5 +20,5 @@ Rails.application.routes.draw do
 
 	# Categories routes
 	resources :categories, except: [:destroy]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+	
 end

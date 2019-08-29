@@ -61,8 +61,42 @@ category6.articles << article19
 category7.articles << article7 << article15 << article20
 category8.articles << article2 << article5 << article9 << article17
 
-
-
+comment = Comment.create(description: 'Just added comments', user: User.find(12), article: Article.find(1))
+comment = Comment.create(description: 'Awesome', user: User.find(3), article: Article.find(1))
+comment = Comment.create(description: '^^^', user: User.find(7), article: Article.find(1))
+comment = Comment.create(description: 'We have comments now!', user: User.find(5), article: Article.find(2))
+comment = Comment.create(description: 'Nice', user: User.find(9), article: Article.find(2))
+comment = Comment.create(description: 'Testing comments', user: User.find(12), article: Article.find(3))
+comment = Comment.create(description: 'Here because of comments', user: User.find(8), article: Article.find(1))
+comment = Comment.create(description: 'Why am I wasting time adding seeds?', user: User.find(8), article: Article.find(4))
+comment = Comment.create(description: '^', user: User.find(6), article: Article.find(4))
+comment = Comment.create(description: 'GREAT READ', user: User.find(3), article: Article.find(20))
+comment = Comment.create(description: 'HAHAHAHAHAHAHAHAH wdlwjhuvqhbkwjdnqwjdbkjqn', user: User.find(2), article: Article.find(12))
+comment = Comment.create(description: ':(', user: User.find(1), article: Article.find(13))
+comment = Comment.create(description: 'That was really stupid', user: User.find(11), article: Article.find(8))
+comment = Comment.create(description: 'Toxic^', user: User.find(8), article: Article.find(8))
+comment = Comment.create(description: 'I think I saw Carl playing in the woods', user: User.find(5), article: Article.find(5))
+comment = Comment.create(description: 'Hey!', user: User.find(10), article: Article.find(16))
+comment = Comment.create(description: 'I know a few!', user: User.find(4), article: Article.find(4))
+comment = Comment.create(description: 'That was neat', user: User.find(7), article: Article.find(2))
+comment = Comment.create(description: 'I\'m just another comment', user: User.find(2), article: Article.find(15))
+comment = Comment.create(description: 'Great!', user: User.find(2), article: Article.find(11))
+comment = Comment.create(description: 'Cool', user: User.find(1), article: Article.find(11))
+comment = Comment.create(description: 'You are a pathetic neo-cosmopolitan elite', user: User.find(6), article: Article.find(11))
+comment = Comment.create(description: 'lIfE hAcKs', user: User.find(10), article: Article.find(8))
+comment = Comment.create(description: 'Yes but they have been terrible as of late', user: User.find(3), article: Article.find(10))
+comment = Comment.create(description: 'I have to agree^^', user: User.find(9), article: Article.find(10))
+comment = Comment.create(description: 'Not that I can\'t help, I just don\'t feel like it', user: User.find(3), article: Article.find(15))
+comment = Comment.create(description: 'I hate that book with a passion', user: User.find(6), article: Article.find(19))
+comment = Comment.create(description: 'Cool website', user: User.find(7), article: Article.find(20))
+comment = Comment.create(description: 'Welcome!', user: User.find(12), article: Article.find(16))
+comment = Comment.create(description: 'Hello', user: User.find(11), article: Article.find(16))
+comment = Comment.create(description: 'I never read it', user: User.find(6), article: Article.find(10))
+comment = Comment.create(description: 'Terrible article bub', user: User.find(1), article: Article.find(18))
+comment = Comment.create(description: 'I want to say hi to my kids, my mom and dad, my dog, my dentist', user: User.find(8), article: Article.find(17))
+comment = Comment.create(description: '"Improvement projects"', user: User.find(5), article: Article.find(18))
+comment = Comment.create(description: 'Very useful', user: User.find(1), article: Article.find(18))
+comment = Comment.create(description: '^^^', user: User.find(3), article: Article.find(18))
 
 
 
