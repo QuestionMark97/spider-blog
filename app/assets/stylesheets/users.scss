@@ -1,3 +1,77 @@
 #footer {
 	background-color: rgba(34, 34, 34, 1);
 }
+
+.user-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.user-title a {
+	color: #583;
+}
+
+.user-title a:hover, .user-title a:active .user-title a:visited, .user-title a:focus {
+	color: #362;
+	text-decoration: none;
+}
+
+#user-panel:hover {
+	background-color: #583;
+}
+
+#user-panel:hover .panel-body .user-title a {
+	color: #fff;
+}
+
+#user-panel .panel-body .user-title a:hover {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.panel .panel-body li small {
+	color: #666;
+}
+
+.panel:hover .panel-body li small {
+	color: #eee;
+}
+
+.panel:hover .dropdown a {
+	color: #fff;
+}
+
+#user-panel .dropdown a:hover {
+	color: #999;
+}
+
+.user-title, .article-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#user-options .dropdown {
+	display:none;
+}
+
+#user-panel:hover .panel-body .row #user-options .dropdown {
+	color: #fff;
+	display: block;
+}
+
+#user-panel .panel-body .row #user-options .open {
+	display: block;
+}
+
+.user-title a, .user-title a:active .user-title a:visited, .user-title a:focus {
+	color: #494;
+	text-decoration: none;
+}
+
+.user-title a:hover {
+	color: #362;
+}
+
+#user-options {
+	position: absolute;
+}

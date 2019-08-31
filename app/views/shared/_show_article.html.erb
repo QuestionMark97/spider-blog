@@ -2,7 +2,7 @@
 <%= render 'shared/errors', obj: comment %>
 <!-- /Error messages -->
 
-<!-- Well -->
+<!-- Container -->
 <div class='col-xs-8 col-xs-offset-2'>
 
 	<!-- Article -->
@@ -10,7 +10,7 @@
 
 		<!-- Article header -->
 		<div class='panel-heading'>
-		<h2 align='center'><%= article.title %></h2>
+			<h2 align='center'><%= article.title %></h2>
 		</div>
 		<!-- /Article header -->
 
@@ -98,7 +98,7 @@
 	<% if article.comments.any? %>
 	<ul class = 'comments'>
 	<% article.comments.reverse.each do |comment| %>
-	<div class='row'>
+	<div class='row' id='comment-row'>
 
 		<!-- Comment image -->
 		<div class='comment-img col-sm-1'>
@@ -116,7 +116,7 @@
 		<!-- Comments options dropdown -->
 		<% if logged_in? %>
 		<% if current_user == comment.user || current_user.admin? %>
-			<div class='comment-options col-sm-1'>
+			<div class='col-sm-1' id='comment-options'>
 			<div class='links dropdown'>
 				<a href='#' class="glyphicon glyphicon-option-vertical" data-toggle='dropdown'
 																						aria-haspopup='true' aria-expanded='true'>
@@ -147,4 +147,4 @@
 	<!-- /Comments section -->
 
 </div>
-<!-- /Well -->
+<!-- /Container -->

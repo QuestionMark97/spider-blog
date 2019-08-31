@@ -12,6 +12,7 @@ $navbar-default-bg: rgba(34, 34, 34, 1);
 	color: #eee;
 }
 
+// Navigation
 .navbar-default .navbar-nav li a {
     color: #eee;
 }
@@ -63,6 +64,7 @@ $navbar-default-bg: rgba(34, 34, 34, 1);
 	color: #aaa;
 }
 
+// Custom button
 .btn-success {
 	background-color: #888;
 	border-color: #888;
@@ -88,6 +90,10 @@ $navbar-default-bg: rgba(34, 34, 34, 1);
 	margin-top: 15px;
 }
 
+.article-meta-details small {
+	color: #888;
+}
+
 .article-actions {
 	border-top: 1px solid #eee;
 	padding-top: 5px;
@@ -99,25 +105,70 @@ $navbar-default-bg: rgba(34, 34, 34, 1);
 
 h1, h2 {
 	color: #666;
-}
-
-.article-title {
 	font-weight: bold;
-	font-size: 1.5em;
 }
 
-.article-title a {
-	color: #583;
-}
-
-.article-title a:hover, .article-title a:active .article-title a:visited, .article-title a:focus {
-	color: #362;
+.article-title a, .article-title a:hover, .article-title a:active .article-title a:visited, .article-title a:focus {
+	color: #fff;
 	text-decoration: none;
+	font-weight: bold;
+}
+
+// Article options
+#article-panel:hover {
+	border-color: #583;
+}
+
+#article-panel .panel-heading {
+	background-color: #fff;
+}
+
+#article-panel:hover .panel-heading {
+	background-color: #583;
+	border-bottom-color: #583;
+}
+
+#article-panel .panel-heading span a {
+	color: #494;
+}
+
+#article-panel:hover .panel-heading span a{
+	color: #fff;
+}
+
+#article-panel .panel-heading .article-options .dropdown {
+	display: none;
+}
+
+#article-panel:hover .panel-heading .article-options .dropdown {
+	display: block;
+}
+
+#article-panel .panel-heading .article-options .open {
+	display: block;
+}
+
+#article-panel .panel-heading .article-options .dropdown .glyphicon {
+	color: #fff;
+}
+
+#article-panel .panel-heading .article-options .dropdown .glyphicon:hover {
+	color: #ddd;
+}
+
+#article-panel .panel-heading .article-options .open .glyphicon {
+	color: #494;
+}
+
+#article-panel:hover .panel-heading .article-options .open .glyphicon {
+	color: #fff;
+}
+
+#article-panel .panel-heading .article-options .open .glyphicon:hover {
+	color: #ddd;
 }
 
 .article-body {
-	border-top: 1px solid #eee;
-	padding-top: 15px;
 	padding:bottom 15px;
 }
 
@@ -200,7 +251,7 @@ footer a:hover {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #888;
 }
 
-.page-btns .pagination ul li a {
+.page-btns .pagination ul li:not(.disabled) a {
 	color: #494;
 }
 
@@ -232,4 +283,45 @@ footer a:hover {
 	color: #fff;
 	background-color: #494;
 	font-weight: bold;
+}
+
+#article-options {
+	font-size: 22px;
+}
+
+// Show article
+
+.comments {
+	list-style-type: none;
+	padding-inline-start: 0px;
+}
+
+.comments .comment-header {
+	color: #888;
+}
+
+.comments li a {
+	color: #494;
+	font-weight: bold;
+}
+
+.comments li a:hover, .comments li a:active, .comments li a:focus {
+	text-decoration: none;
+	color: #362;
+}
+
+.comment-img {
+	padding-top: 2px
+}
+
+ #comment-options .dropdown {
+	 display: none;
+}
+
+#comment-row:hover #comment-options .dropdown {
+	display: block;
+}
+
+#comment-row #comment-options .open {
+	display: block;
 }

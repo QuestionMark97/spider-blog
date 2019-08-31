@@ -2,37 +2,3 @@
 	background-color: rgba(34, 34, 34, 1);
 }
 
-#article-options {
-	font-size: 22px;
-}
-
-.comments {
-	list-style-type: none;
-	padding-inline-start: 0px;
-}
-
-.comments .comment-header {
-	color: #888;
-}
-
-.comments li a {
-	color: #494;
-	font-weight: bold;
-}
-
-.comments li a:hover, .comments li a:active, .comments li a:focus {
-	text-decoration: none;
-	color: #362;
-}
-
-.comment-img {
-	padding-top: 2px
-}
-
-.row .comment-options {
-	display: none;
-}
-
-.row:hover .comment-options {
-	display: block;
-}

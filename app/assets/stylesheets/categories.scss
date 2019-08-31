@@ -1,3 +1,63 @@
 #footer {
 	background-color: rgba(34, 34, 34, 1);
 }
+
+#category-panel:hover {
+	background-color: #583;
+}
+
+#category-panel:hover .panel-body .category-title a {
+	color: #fff;
+}
+
+#category-panel .panel-body .category-title a:hover {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.panel .panel-body li small {
+	color: #666;
+}
+
+.panel:hover .panel-body li small {
+	color: #eee;
+}
+
+.panel:hover .dropdown a {
+	color: #fff;
+}
+
+#category-panel .dropdown a:hover {
+	color: #999;
+}
+
+.category-title, .article-title {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#category-options .dropdown {
+	display:none;
+}
+
+#category-panel:hover .panel-body .row #category-options .dropdown {
+	color: #fff;
+	display: block;
+}
+
+#category-panel .panel-body .row #category-options .open {
+	display: block;
+}
+
+.category-title a, .category-title a:active .category-title a:visited, .category-title a:focus {
+	color: #494;
+	text-decoration: none;
+}
+
+.category-title a:hover {
+	color: #362;
+}
+
+#category-options {
+	position: absolute;
+}
