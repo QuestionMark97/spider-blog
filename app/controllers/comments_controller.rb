@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
-	before_action :set_comment, except: [:create]
+	before_action :set_comment, except: [:edit, :create]
+	before_action :set_edit_comment, only: :edit
 	before_action :require_user
-	before_action :require_same_user_or_admin, only: [:destroy]
+	before_action :require_same_user_or_admin, only: :destroy
 	before_action :require_same_user, only: [:edit, :update]
 
 	def create
@@ -13,9 +14,6 @@ class CommentsController < ApplicationController
 		end
 		redirect_to article_path(@comment.article)
 
-	end
-
-	def edit
 	end
 
 	def update
@@ -36,6 +34,10 @@ class CommentsController < ApplicationController
 	private
 	def set_comment
 		@comment = Comment.find(params[:id])
+	end
+
+	def set_edit_comment
+		@comment = Comment.includes(article: [:user, :categories, comments: :user]).find(params[:id])
 	end
 
 	def comment_params

@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user_articles = @user.articles.paginate(page: params[:page], per_page: 5).order('updated_at DESC')
+		@user_articles = @user.articles.paginate(page: params[:page], per_page: 5).order('updated_at DESC').includes(:user, :categories)
 	end
 
 	def destroy

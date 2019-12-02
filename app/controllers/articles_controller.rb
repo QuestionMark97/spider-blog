@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
 	
-	before_action :set_article, only: [:edit, :update, :show, :destroy]
+	before_action :set_article, only: [:edit, :update, :destroy]
 	before_action :require_user, except: [:index, :show]
 	before_action :require_same_user, only: [:edit, :update, :destroy]
 
 	def index
-		@articles = Article.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+		@articles = Article.paginate(page: params[:page], per_page: 5).order('created_at DESC').includes(:user, :categories)
 	end
 
 	def new
@@ -36,6 +36,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		@article = Article.includes(:user, :categories, comments: :user).find(params[:id])
 		@comment = Comment.new
 		@comment.article = @article
 	end
