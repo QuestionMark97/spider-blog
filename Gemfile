@@ -17,7 +17,7 @@ gem 'will_paginate', '~> 3.1.7'
 # Include bootstrap classes for pagination
 gem 'bootstrap-will_paginate', '~> 1.0.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 # Use bootstrap classes to facilitate styling
 gem 'bootstrap-sass', '~> 3.4.1'
 # Use SCSS for stylesheets
